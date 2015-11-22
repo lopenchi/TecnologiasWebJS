@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-8 col-sm-4 col-xs-offset-2 col-sm-offset-4 ">
+
+    <h1>Pokemons de: <%- req.session.user.nombre %>  </h1>
+
+    <h4> Ingrese los datos de su nuevo pokemon </h4>
+
+    <form action="Pokemon/guardarPokemon" method="post" enctype="multipart/form-data">
+
+      <label class="control-label" for="nombre"> Nombre: </label>
+      <input class="form-control" type="text" name="nombre">
+      <br>
+
+      <div class="form-group">
+
+        <label class="control-label" for="fotoPokemon"> Foto: </label>
+        <img class="fotoPerfil" alt="aun no sale el puto " src="images/pokemons/<%- req.session.user.url %>">
+
+        <input class="form-control" type="file" name="fotoPokemon">
+      </div>
+      <br>
+
+      <input class="form-control btn btn-primary" type="submit" value="Guardar Pokemon">
+    </form>
+  </div>
+</div>
