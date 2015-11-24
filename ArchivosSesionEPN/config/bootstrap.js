@@ -15,40 +15,56 @@ module.exports.bootstrap = function (cb) {
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   cb();
 
+  /*
+   (function () {
+   User.create({
+   nombre: "Carolina",
+   usuario: "caro",
+   password: "123456"
+   }).exec(function (err, usrCreated) {
 
-  (function () {
-    User.create({
-      nombre: "Carolina",
-      usuario: "caro",
-      password: "123456"
-    }).exec(function (err, usrCreated) {
+   if (err) {
+   sails.log.error('Error :( ', err);
+   return;
+   }
 
-      if (err) {
-        sails.log.error('Error :( ', err);
-        return;
-      }
+   sails.log.info('Usuario: ' + JSON.stringify(usrCreated));
 
-      sails.log.info('Usuario: ' + JSON.stringify(usrCreated));
 
-      // Crear el pokemon referenciando al usuario
-      Pokemon.create({nombre: "Pikachu", dueno: usrCreated.id})
-        .exec(function (err, pokemonCreated) {
-          if (err) {
-            sails.log.error('Error :( ', err);
-            return;
-          }
-          sails.log.info('Pokemon: ' + JSON.stringify(pokemonCreated));
-        });
+   // Crear el pokemon referenciando al usuario
+   Pokemon.create({nombre: "Pikachu", dueno: usrCreated.id})
+   .exec(function (err, pokemonCreated) {
+   if (err) {
+   sails.log.error('Error :( ', err);
+   return;
+   }
+   sails.log.info('Pokemon: ' + JSON.stringify(pokemonCreated));
+   });
 
-      Pokemon.create({nombre: "Charizar", dueno: usrCreated.id})
-        .exec(function (err, pokemonCreated) {
-          if (err) {
-            sails.log.error('Error :( ', err);
-            return;
-          }
-          sails.log.info('Pokemon: ' + JSON.stringify(pokemonCreated));
-        });
+   Pokemon.create({nombre: "Charizar", dueno: usrCreated.id})
+   .exec(function (err, pokemonCreated) {
+   if (err) {
+   sails.log.error('Error :( ', err);
+   return;
+   }
+   sails.log.info('Pokemon: ' + JSON.stringify(pokemonCreated));
+   });
 
-    });
-  })();
+   });
+
+   User.create({
+   nombre: "Diana",
+   usuario: "diana",
+   password: "123456"
+   }).exec(function (err, usrCreated) {
+
+   if (err) {
+   sails.log.error('Error :( ', err);
+   return;
+   }
+
+   sails.log.info('Usuario: ' + JSON.stringify(usrCreated));
+   });
+
+   })(); */
 };

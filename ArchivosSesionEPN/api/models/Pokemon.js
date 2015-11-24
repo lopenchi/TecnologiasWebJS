@@ -26,6 +26,9 @@ module.exports = {
     },
     dueno: {
       model: "User"
+    },
+    tipo: {
+      type: "string"
     }
   }
 };

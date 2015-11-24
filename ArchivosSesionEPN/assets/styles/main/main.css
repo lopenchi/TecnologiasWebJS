@@ -7,3 +7,28 @@
 .fotoPerfil {
   width: 200px;
 }
+
+.pokebola {
+  height: 40px;
+}
+
+.fsStyle {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  border: 1px solid #999999;
+  padding: 4px;
+  margin: 5px;
+}
+
+.legendStyle {
+  font-size: 90%;
+  color: #888888;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.legend {
+  width: auto;
+  border-bottom: 0px;
+}

@@ -17,7 +17,7 @@ module.exports = {
       return;
     } else {
 
-      var deleteFd = 'D:\\EPN Desaroollo\\Tecnologias Web con JS\\TecWebJav_2015_B\\ArchivosSesionEPN\\assets\\images\\pokemons';
+      var deleteFd = 'D:\\EPN Desaroollo\\Tecnologias Web con JS\\Repo GIT\\TecnologiasWebJS\\ArchivosSesionEPN\\assets\\images\\pokemons\\';
       sails.log.info('Perfil: ', params.fotoPokemon);
 
       req.file('fotoPokemon').upload({

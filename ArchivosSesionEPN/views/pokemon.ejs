@@ -1,15 +1,20 @@
 <div class="row">
-  <div class="col-xs-8 col-sm-4 col-xs-offset-2 col-sm-offset-4 ">
+  <div class="col-xs-8 col-sm-6 col-xs-offset-2 col-sm-offset-3 ">
 
     <h1>Pokemons de: <%- req.session.user.nombre %>  </h1>
 
-    <h4> Ingrese los datos de su nuevo pokemon </h4>
+    <h4> <img src="../images/pokebola.png" class="pokebola"> Ingrese los datos de su nuevo pokemon </h4>
 
     <form action="Pokemon/guardarPokemon" method="post" enctype="multipart/form-data">
 
       <label class="control-label" for="nombre"> Nombre: </label>
       <input class="form-control" type="text" name="nombre">
       <br>
+
+      <label class="control-label" for="tipo"> Tipo: </label>
+      <input class="form-control" type="text" name="tipo" placeholder="Ej: agua, fuego">
+      <br>
+
 
       <div class="form-group">
 

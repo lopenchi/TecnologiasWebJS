@@ -9,7 +9,7 @@ module.exports = {
 
   subirFoto: function (req, res) {
     var params = req.allParams();
-    var deleteFd = 'D:\\EPN Desaroollo\\Tecnologias Web con JS\\TecWebJav_2015_B\\ArchivosSesionEPN\\assets\\images\\';
+    var deleteFd = 'D:\\EPN Desaroollo\\Tecnologias Web con JS\\Repo GIT\\TecnologiasWebJS\\ArchivosSesionEPN\\assets\\images\\';
     sails.log.info('Perfil: ', params.perfil);
 
     req.file('perfil').upload({
@@ -30,7 +30,7 @@ module.exports = {
       var urlImagen = uploadedFiles[0].fd.replace(deleteFd, "");
       var avatarUrl = require('util').format('%s/user/avatar/%s', sails.getBaseUrl(), req.session.user.id);
       // Save the "fd" and the url where the avatar for a user can be accessed
-      User.update(req.session.me, {
+      User.update(req.session.user.id, {
 
         // Generate a unique URL where the avatar can be downloaded.
         avatarUrl: avatarUrl,

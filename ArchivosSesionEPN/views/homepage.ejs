@@ -1,23 +1,35 @@
 <div class="row">
-  <div class="col-xs-8 col-sm-4 col-xs-offset-2 col-sm-offset-4 ">
+  <div class="col-xs-8 col-sm-6 col-xs-offset-2 col-sm-offset-3 ">
 
     <h1>Bienvenidos</h1>
 
-    <h2>Lista de Usuarios</h2>
+    <h4>Lista de Usuarios</h4>
+
 
     <ul>
       <% for(var i = 0; i < usuarios.length; i++) { %>
-      <li><%= usuarios[i].nombre %></li>
-      <ul class="list-group">
-        <% for(var j = 0; j < usuarios[i].pokemons.length; j++) { %>
-        <pre>
-      <li class="list-group-item">
-        <%= usuarios[i].pokemons[j].nombre %>
-        <img class="fotoPerfil" src="images/pokemons/<%= usuarios[i].pokemons[j].url %>">
-      </li>
-    </pre>
-        <% } %>
-      </ul>
+
+      <fieldset>
+        <legend class="legendStyle">
+          <a data-toggle="collapse" data-target="#<%= usuarios[i].id %>" href="#">
+            <li><%= usuarios[i].nombre %></li>
+          </a>
+        </legend>
+
+        <div class="row collapse in" id="<%= usuarios[i].id %>">
+
+          <ul class="list-group-item-success">
+            <% for(var j = 0; j < usuarios[i].pokemons.length; j++) { %>
+
+            <li class="list-group-item">
+              <b><%= usuarios[i].pokemons[j].nombre %></b>
+              <br>
+              <img class="fotoPerfil" src="images/pokemons/<%= usuarios[i].pokemons[j].url %>">
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </fieldset>
       <% } %>
     </ul>
   </div>
